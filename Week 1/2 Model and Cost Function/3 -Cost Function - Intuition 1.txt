@@ -1,0 +1,25 @@
+Simplified Cost Function
+
+I have a cost function and my goal is to minimize Cost function J(θ1, θ2) for a given θ1, θ2 value.
+
+Now,
+	hθ(x) = θ0 + θ1(x)
+if i choose θ0 as 0, then 
+	hθ(x) = θ1(x)
+
+For, x = 0, hθ(x) will also be zero. Line for hθ(x) will pass through the origin.
+
+Also, our cost function will become 
+	J(θ1) = (1/2m) ∑i=1 to m [ θ1(xi) − yi ]square
+
+Now, our goal is to minimize J(θ1) or simply θ1.
+
+
+				hθ(x)							|						J(θ1)
+												|
+	For a fixed θ1, This is a function of x.	|			This is a Function of parameter θ1.
+												|
+ 	If i take θ1 = 1, then for all values of x 	|		For θ1 = 1, as h(x(i)) = x(i)
+ 		hθ1(x(i)) = θ1x(i) = x(i)				|				J(θ1) = 0
+ 		i.e. h(x(i)) = x(i)						|
+

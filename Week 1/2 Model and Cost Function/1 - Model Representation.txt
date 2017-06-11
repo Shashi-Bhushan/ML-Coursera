@@ -1,0 +1,62 @@
+Problem
+
+My Friends house is 1250 Sq Ft and i want to tell them how much they should sell their house for.
+Seeing the House Price vs size chart, we can deduce that the house should sell for 220k.
+
+This is an Example of Supervised learning as we give a few right answers to the program viz house prices for some sizes.
+Now, We have been asked to deduce the price based on this information.
+
+Now, This problem is a Type of Supervised Learning Problem.
+Given the 'Right Answer' for each example in the data,
+Interpolate the answer for a given Data Set.
+
+Also, It's a regression problem because the domain is not fixed.
+The value of the data set we are seeking answer for is not from a specific domain.
+
+
+=========================
+
+m - Number of Training Examples
+x - Number of 'Input' variables/ features
+y - Number of 'Output' variables/ target variable
+
+we’ll use x(i) to denote the “input” variables (living area in this example), also called input features, and y(i) to denote the “output” or target variable that we are trying to predict (price). 
+A pair (x(i),y(i)) is called a training example, and the dataset that we’ll be using to learn—a list of m training examples 
+(x(i), y(i)); i=1 ... m — is called a training set,
+
+=========================
+
+Training set is the Inputs for the Algorithm
+Then, the Learning Algorithm will generate a Hypothesis denoted by small case h.
+Hypothesis is a function, whose job is to take as input size of house and output Estimated Price of House
+
+		 ----------------
+		 | Training Set |
+		 ----------------
+		 	   ||
+		 	   \/
+		----------------------
+		| Learning Algorithm |
+		----------------------
+		 	   ||
+		 	   \/
+		 	--------	
+Size of	->	|  h   | -> Estimated
+House (x)	--------	Price of House(y)
+
+
+h maps x's to y's
+In our example, Hypothesis h is estimating is the price of the house corresponsing to it's size in Portland, Oregon is a straight line function.
+
+=========================
+
+HOW TO REPRESENT h
+
+h(subscript theta) x = theta(subscript 0) + theta(subscript 1) x 
+
+shorthand as h(x)
+
+In our function, our Hypothesis h is a Linear Regression with one variable.
+ALSO, known as Univariate Linear Regression.
+Remember, that it's a Regression problem, for that When the target variable that we’re trying to predict is continuous, such as in our housing example, we call the learning problem a regression problem.
+When y can take on only a small number of discrete values (such as if, given the living area, we wanted to predict if a dwelling is a house or an apartment, say), we call it a classification problem.
