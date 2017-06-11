@@ -20,6 +20,59 @@ Now, our goal is to minimize J(θ1) or simply θ1.
 	For a fixed θ1, This is a function of x.	|			This is a Function of parameter θ1.
 												|
  	If i take θ1 = 1, then for all values of x 	|		For θ1 = 1, as h(x(i)) = x(i)
- 		hθ1(x(i)) = θ1x(i) = x(i)				|				J(θ1) = 0
- 		i.e. h(x(i)) = x(i)						|
+ 		hθ1(x(i)) = θ1x(i) = x(i)				|		J(θ1) = (1/2m) ∑i=1 to m [ θ1(xi) − yi ]square
+ 		i.e. h(x(i)) = x(i)						|			  = (1/2m) ∑i=1 to m [ xi − yi ]square
+ 												|			  = 0
+ 		
 
+=========================
+
+What if θ1 is 0.5 instead of 1.
+Then, the hypothesis function will become a line, crossing from origin and having a slope equals 0.5.
+
+Notice that when x = 1 here, h(θ1) = 0.5
+
+J(θ1) = J(0.5)
+	  = (1/2m) [(predicted value - actual value)square + ... ]
+	  = (1/2 * 3) [(0.5 - 1)square + (1 - 2)square + (1.5 - 3)square]
+	  = (1/2 * 3) [3.5]
+	  = 3.5 / 6
+	  = 0.58
+
+=========================
+
+Sample question
+
+Suppose we have a training set with m=3 examples, plotted in the picture. our hypothesis representation is hθ(x) = θ1(x) with parameters θ1. What is J(0) ?
+
+J(0) = (1/2m) [(predicted value at x = 0 - actual value at x = 0)square]
+
+Now, θ1 = 0 implies that the slope of line is 0.
+So, when x = 1, h(θ1) = 0
+	when x = 2, h(θ1) = 0
+	when x = 3, h(θ1) = 0
+
+Substituting these values in the formulae for cost function
+J(0) = (1/2*3) [(0 - 1)square + (0 - 2)square + (0 - 3)square]
+	 = (1/6) [1 + 4 + 9]
+	 = 14 / 6
+	 = 2.3
+
+
+
+So, to summarize, each value of θ1 will corresponde to a different hypothesis function.
+and mean square error for the hypothesis function w.r.t θ1 will also change.
+J(θ1) will become a curve when we plot all the different values of J(θ1) corresponding to different θ1.
+
+For Example
+	θ1 = 1 means Straight Line with slope 1 and J(1) = 0
+	θ1 = 0.5 means Straight Line with slope 0.5 and J(1) = 0.58
+	θ1 = 0 means Straight Line with slope 0 and J(1) = 2.3
+
+Our goal is to minimize J(θ1) i.e. our cost function. For θ1 = 1, Cost function J(θ1) is minimum.
+
+=========================
+
+If we try to think of it in visual terms, our training data set is scattered on the x-y plane. We are trying to make a straight line (defined by hθ(x)) which passes through these scattered data points.
+
+Our objective is to get the best possible line. The best possible line will be such so that the average squared vertical distances of the scattered points from the line will be the least. Ideally, the line should pass through all the points of our training data set. In such a case, the value of J(θ0,θ1) will be 0.

@@ -1,0 +1,5 @@
+Unlike the previous Section, we are going to keep both the parameters θ0 and θ1 now.
+
+Now, when we want to Plot our graph for J(θ0, θ1), we can not draw this on a 2-Dimentional graph.
+Because there are 2 Parameters θ0 and θ1 w.r.t which we want to draw the graph.
+So, it will be a 3-Dimentional
