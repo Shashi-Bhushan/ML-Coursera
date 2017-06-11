@@ -3,9 +3,9 @@ m is the number of training examples.
 
 Hypothesis that we use to make predictions is a linear function.
 
-h subscript theta (x) = theta subscript 0 + theta subscript 1 (x)
+h subscript theta (x) = θ0 and θ1(x)
 
-(Theta zero) and (Theta one) are Parameters of the model.
+θ0 and θ1 are Parameters of the model.
 
 =========================
 
@@ -32,3 +32,18 @@ The mean is halved (1/2) as a convenience for the computation of the gradient de
 
 This Cost Function is also called Squared Error Function or Mean Error Function.
 Squared Error cost function is the most commonly used Error function for Linear Regression Problems.
+
+=========================
+
+WHY COST FUNCTION
+
+Because when we are given m data points, we need to device a hypothesis formulae, which can correctly interpolate any values of y for a given x.
+Now, these data points are not some standard data points, which follows a specific formulae.
+
+For Eg, say we have formulae y = 2x. Different values of x and y for this example can be
+	x = 1, y = 2
+	x = 2, y = 4
+	x = 3, y = 6
+	and so on.
+Here, there is no margin of error because each y is derived from a formulae, which takes x as input.
+But, when we have to device a formulae for the data points already given, there is a margin of error. This margin of error is measured by our Cost Function J(θ0, θ1) and We seek to minimize this error margin so our interpolated values are as close to reality as possible.
