@@ -1,0 +1,31 @@
+=========================
+Supervised Learning
+=========================
+
+Supervised Learning problems are generally of two types.
+
+# Classification
+
+y(i) ∈ { a finite set of values}
+
+
+# Regression
+
+y(i) ∈ R Ɐ real numbers
+
+=========================
+Unsupervised Learning
+=========================
+
+Given (x¹, x², .... xⁿ), find patterns in the data.
+No Target Variable Given here, on the basis of which to Distinguish data.
+
+Eg. Music with two voices, Database of DNAs, a Collection of photos
+all these are examples of unsupervised learning problems, where it's not given that on the basis of which target varibles, the data should be classified.
+
+# Clustering
+
+We have some points in 2-D real space. Your task is to find cluster in the data.
+A collection of photos and segregating those photos on the basis of if they are front bumper or rear bumper etc are clustering.
+
+# Non Clustering - Cocktail Party Problem

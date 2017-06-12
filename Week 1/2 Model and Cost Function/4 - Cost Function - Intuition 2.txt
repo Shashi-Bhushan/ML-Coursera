@@ -1,5 +1,31 @@
 Unlike the previous Section, we are going to keep both the parameters θ0 and θ1 now.
 
-Now, when we want to Plot our graph for J(θ0, θ1), we can not draw this on a 2-Dimentional graph.
-Because there are 2 Parameters θ0 and θ1 w.r.t which we want to draw the graph.
-So, it will be a 3-Dimentional
+Now, when we want to Plot our graph for J(θ₀, θ₁), we can not draw this on a 2-Dimentional graph.
+Because there are 2 Parameters θ₀ and θ₁ w.r.t which we want to draw the graph.
+So, it will be a 3-Dimentional graph.
+
+=========================
+Bivariate Cost Function
+=========================
+
+The height of the bow shaped graph from the place θ₀, θ₁ represent the value of the cost function.
+We intent to have the bow as close to the plane as possible.
+
+=========================
+Contour Plot
+=========================
+
+A contour plot is a graph that contains many contour lines. 
+A contour line of a two variable function has a constant value at all points of the same line. 
+
+The center of the contour plot is where the cost function value is minimum.
+
+In the graph, we have chosen a point where θ₀ = 800 and θ₁ = -0.15.
+Now, these values represent the current Hypothesis function.
+As you can see in the graph as well as the value of the cost function being far away from the center, this is not the optimal value of θ₀ and θ₁ for the solution.
+
+
+In the second example, we choose θ₀ = 360 and θ₁ = 0, so our hypothesis function becomes h(x) = 30 + 0 * x.
+This value is much more close to the center of the contour plot. Hence, it's cost function value will also be lesser than the previous one.
+
+What we want is a program, that calculates the values of θ₀ and θ₁ which results in minimum value for the cost function.

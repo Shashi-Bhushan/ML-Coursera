@@ -1,0 +1,22 @@
+=========================
+Gradient Descent
+=========================
+
+Gradient Descent is an algorithm used to minimize the cost function J().
+
+# How
+
+We have Cost Function J(θ₀, θ₁)
+
+we want to minimize θ₀ and θ₁
+
+# OUTLINE
+
+- Start with any value of θ₀ and θ₁.
+  We will choose θ₀ = 0 and θ₁ = 0 to start.
+- Keep changing values of θ₀ and θ₁ until we find a minimum Cost
+
+Starts at a point
+Keep going downhill until you reach a point of local minimum value.
+
+If I use another point in the plot as my starting point, I might reach a new local optimal solution.
