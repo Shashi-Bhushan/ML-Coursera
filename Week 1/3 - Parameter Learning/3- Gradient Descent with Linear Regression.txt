@@ -2,7 +2,8 @@ What we are going to do now is to apply Gradient Descent Algorithm to minimize o
 
 Most Important thing we need to find out is Derivative.
 
-As seen in the picture,
+When specifically applied to the case of linear regression, a new form of the gradient descent equation can be derived. 
+We can substitute our actual cost function and our actual hypothesis function and modify the equation to find the derivatives for Linear Regression:
 
 ∂/∂θ₀J(θ₀, θ₁) = (1/m) ∑i=1 to m [hθ(xⁱ) − yⁱ]
 ∂/∂θ₁J(θ₀, θ₁) = (1/m) ∑i=1 to m [hθ(xⁱ) − yⁱ] * xⁱ
@@ -10,3 +11,19 @@ As seen in the picture,
 # Gradient Descent Algorithm
 
 θ₀ = θ₀ + α * (1/m) ∑i=1 to m [hθ(xⁱ) − yⁱ]
+θ₁ = θ₁ + α * (1/m) ∑i=1 to m [hθ(xⁱ) − yⁱ] * xⁱ
+
+# Cost Function and Linear Regression
+
+Cost function of a Linear Regression with both θ₁ and θ₀ is going to be a Bow shaped or technically speaking, a Convex function.
+So, Running a Gradient Descent on a convex Function will converge to a global optima because there is not local optima in this case.
+
+
+# Batch Gradient Descent
+
+The Term batch here signifies that for each step towards the minima, Gradient Descent looks at the Batch of the data sets as a whole and does not leave out any values while finding the next point in the contour plot.
+
+
+ this is simply gradient descent on the original cost function J. This method looks at every example in the entire training set on every step, and is called batch gradient descent. Note that, while gradient descent can be susceptible to local minima in general, the optimization problem we have posed here for linear regression has only one global, and no other local, optima; thus gradient descent always converges (assuming the learning rate α is not too large) to the global minimum. Indeed, J is a convex quadratic function. Here is an example of gradient descent as it is run to minimize a quadratic function.
+
+ 
