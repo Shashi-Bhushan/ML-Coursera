@@ -1,0 +1,36 @@
+===========================
+Gradient Descent Intuition
+===========================
+
+In order to see why the learning rate α and derivative term ∂/∂θⱼJ(θ₀, θ₁) are in the Gradient descent formulae.
+We used one parameter θ1 and plotted its cost function to implement a gradient descent. 
+
+θ₁ and Cost function as J(θ₁); θ₁ ϵ Real Numbers (R)
+
+On a side note, we should adjust our parameter α to ensure that the gradient descent algorithm converges in a reasonable time. Failure to converge or too much time to obtain the minimum value imply that our step size is wrong.
+
+# Derivative
+
+derivative term ∂/∂θ₀J(θ₀) takes the tangent to the point and gives us a slope of the tangent.
+
+In our first example, Derivative term ∂/∂θ₀J(θ₀) will be positive because the line is slanting up.
+So, θ₀ will decrease. This is correct estimation as when we decrease θ₀, it gets closer to the minimum point.
+
+In second example, Derivative term ∂/∂θ₀J(θ₀) will be negative value because line is slanting down.
+So, θ₀ will increase. This is also indeed correct estimation.
+
+# Learning Rate
+
+If our learning rate is too small, Gradient Descent will be too slow.
+
+If our Learning rate is too large, Gradient Descent might fail to converge or even diverge.
+
+Now, when we have a fixed α, Gradient Descent converges to local minimum.
+Because, at the next step, My derivative or the slope of line is a bit small.
+
+# How does gradient descent converge with a fixed step size α?
+
+The intuition behind the convergence is that ∂/∂θ₀J(θ₀) approaches 0 as we approach the bottom of our convex function. 
+At the minimum, the derivative will always be 0 and thus we get 
+		θ₁ = θ₁ + α * 0
+
