@@ -1,0 +1,12 @@
+What we are going to do now is to apply Gradient Descent Algorithm to minimize our Square Error Cost Function.
+
+Most Important thing we need to find out is Derivative.
+
+As seen in the picture,
+
+∂/∂θ₀J(θ₀, θ₁) = (1/m) ∑i=1 to m [hθ(xⁱ) − yⁱ]
+∂/∂θ₁J(θ₀, θ₁) = (1/m) ∑i=1 to m [hθ(xⁱ) − yⁱ] * xⁱ
+
+# Gradient Descent Algorithm
+
+θ₀ = θ₀ + α * (1/m) ∑i=1 to m [hθ(xⁱ) − yⁱ]
