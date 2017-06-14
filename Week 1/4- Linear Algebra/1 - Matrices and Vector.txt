@@ -80,3 +80,13 @@ Denoted as I (or Iₙₓₙ )
 Aₘₓₙ x Iₙₓₙ = Iₘₓₘ x Aₘₓₙ = Aₘₓₙ 
 
 Pay attention to Identity matrix dimentions
+
+===============
+Matrix Inverse
+===============
+
+if A is an m x m matrix, and it has an inverse.
+
+A x A⁻¹ = A⁻¹ x A = I
+
+where I is an Identity Matrix
