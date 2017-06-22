@@ -1,0 +1,16 @@
+θ = (XᵀX)⁻¹XᵀY
+
+
+==============================
+∇ₐtr(AB) = Bᵀ
+
+Suppose we have some fixes matrix B ε Rⁿˣᵐ 
+We can then define a function f : Rⁿˣᵐ |→ R according to f(A) = tr(AB).								-- (1)
+f(A) = 3A₁₁ + 2A₂₂ ...
+
+if A ε Rᵐˣⁿ, then AB is a square matrix (m by m) and we can apply the trace operator to it.
+f indeed map from Rᵐˣⁿ to R as it's input is a matrix A(B is a fixed/constant matrix) and output is a number.
+
+So, ∇ₐf(A) will be a m by n matrix.
+	= ∇ₐf(A) = Bᵀ
+	= ∇ₐtr(AB) = Bᵀ		-- from (1)

@@ -1,0 +1,27 @@
+Linear regression with multiple variables is also known as "multivariate linear regression".
+
+We now introduce notation for equations where we can have any number of input variables.
+
+x⁽ⁱ⁾ⱼ = value of feature j in the ith training example
+x⁽ⁱ⁾ = the input (features) of the ith training example
+m = the number of training examples
+n = the number of features
+The multivariable form of the hypothesis function accommodating these multiple features is as follows:
+
+hθ(x)=θ₀ + θ₁x₁ + θ₂x₂ + θ₃x₃ + ... + θₙxₙ
+
+In order to develop intuition about this function, we can think about θ₀ as the basic price of a house, θ₁ as the price per square meter, θ₂ as the price per floor, etc. x₁ will be the number of square meters in the house, x₂ the number of floors, etc.
+
+Using the definition of matrix multiplication, our multivariable hypothesis function can be concisely represented as:
+
+hθ(x)=[θ0 θ1 ... θn] | x₀ | = θᵀx
+					 | x₁ |
+					 | x₂ |
+					 | .. |
+					 | xₙ |
+
+This is a vectorization of our hypothesis function for one training example; see the lessons on vectorization to learn more.
+
+Remark: Note that for convenience reasons in this course we assume x⁽ⁱ⁾₀ = 1 for (i ε 1, … , m). 
+This allows us to do matrix operations with theta and x. 
+Hence making the two vectors 'θ' and x(i) match each other element-wise (that is, have the same number of elements: n+1).]
