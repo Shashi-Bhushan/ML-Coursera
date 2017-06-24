@@ -43,7 +43,7 @@ repeat until convergence {
 # Correct Simultaneous Update
 
 temp0 := θ₀ - α * [ ∂/∂θ₀J(θ₀, θ₁) ]
-temp0 := θ₁ - α * [ ∂/∂θ₁J(θ₀, θ₁) ]
+temp1 := θ₁ - α * [ ∂/∂θ₁J(θ₀, θ₁) ]
 
 θ₀ := temp0
 θ₁ := temp1

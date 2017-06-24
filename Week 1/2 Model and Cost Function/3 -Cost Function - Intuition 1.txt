@@ -20,7 +20,7 @@ Now, our goal is to minimize J(θ₁).
 												|
  	If i take θ₁ = 1, then for all values of x 	|		For θ₁ = 1, as h(xⁱ) = xⁱ
  		hθ₁(xⁱ) = θ₁xⁱ = xⁱ						|		J(θ₁) = (1/2m) ∑i=1 to m [ θ₁(xⁱ) − yⁱ ]²
- 		i.e. h(xⁱ) = xⁱ							|			  = (1/2m) ∑i=1 to m [ xⁱ − yⁱ ]²
+ 		i.e. h(xⁱ) = xⁱ							|			  = (1/2m) ∑i=1 to m [ xⁱ − yⁱ ]²     ..  (because xⁱ = 1 and yⁱ = 1)
  												|			  = 0
 =========================
 

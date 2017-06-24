@@ -17,8 +17,17 @@ for iter = 1:num_iters
     %       of the cost function (computeCost) and gradient here.
     %
 
-    
-
+	
+	h = (X * theta - y)';
+	% multiply t with x(i)j before summation
+    % h is a number
+	% what i need to do with this number is theta(zero) := theta(zero) - X[row][zero]
+	
+	theta(1) = theta(1) - (alpha/m) * h  * X(:, 1);
+	theta(2) = theta(2) - (alpha/m) * h  * X(:, 2);
+	
+	% disp("iter : " + iter);
+	% pause;
 
 
 
@@ -29,5 +38,6 @@ for iter = 1:num_iters
     J_history(iter) = computeCost(X, y, theta);
 
 end
-
+ %disp(J_history);
 end
+

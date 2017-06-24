@@ -25,7 +25,7 @@ Now, these values represent the current Hypothesis function.
 As you can see in the graph as well as the value of the cost function being far away from the center, this is not the optimal value of θ₀ and θ₁ for the solution.
 
 
-In the second example, we choose θ₀ = 360 and θ₁ = 0, so our hypothesis function becomes h(x) = 30 + 0 * x.
+In the second example, we choose θ₀ = 360 and θ₁ = 0, so our hypothesis function becomes h(x) = 360 + 0 * x.
 This value is much more close to the center of the contour plot. Hence, it's cost function value will also be lesser than the previous one.
 
 What we want is a program, that calculates the values of θ₀ and θ₁ which results in minimum value for the cost function.
