@@ -28,11 +28,18 @@ sigma = zeros(1, size(X, 2));
 
 
 
+meanOne = mean(X_norm(:,1));
+meanTwo = mean(X_norm(:,2));
+
+X_norm(:, 1) = X_norm(:, 1) - meanOne;
+X_norm(:, 2) = X_norm(:, 2) - meanTwo; 
+
+sigmaOne = std(X_norm(:, 1));
+sigmaTwo = std(X_norm(:, 2));
 
 
-
-
-
+X_norm(:, 1) = X_norm(:, 1) - sigmaOne;
+X_norm(:, 2) = X_norm(:, 2) - sigmaTwo; 
 
 % ============================================================
 

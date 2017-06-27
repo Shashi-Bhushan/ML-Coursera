@@ -19,13 +19,14 @@ for iter = 1:num_iters
 
 
 
-
-
-
-
-
-
-
+	h = (X * theta - y)';
+	% multiply t with x(i)j before summation
+    % h is a number
+	% what i need to do with this number is theta(zero) := theta(zero) - X[row][zero]
+	
+	theta(1) = theta(1) - (alpha/m) * h  * X(:, 1);
+	theta(2) = theta(2) - (alpha/m) * h  * X(:, 2);
+	theta(3) = theta(3) - (alpha/m) * h  * X(:, 3);
 
     % ============================================================
 
@@ -33,5 +34,6 @@ for iter = 1:num_iters
     J_history(iter) = computeCostMulti(X, y, theta);
 
 end
-
+disp(J_history);
+pause;
 end
