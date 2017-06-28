@@ -34,6 +34,5 @@ for iter = 1:num_iters
     J_history(iter) = computeCostMulti(X, y, theta);
 
 end
-disp(J_history);
-pause;
+
 end
