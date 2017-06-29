@@ -26,20 +26,24 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
+% take mean of X
+mean = mean(X);
+mu = mean;
 
+% Make a matrix of size X having mean in each row
+mean = [zeros(size(X)) + mean];
 
-meanOne = mean(X_norm(:,1));
-meanTwo = mean(X_norm(:,2));
+% subtract X from mean
+X_norm = X_norm - mean;
 
-X_norm(:, 1) = X_norm(:, 1) - meanOne;
-X_norm(:, 2) = X_norm(:, 2) - meanTwo; 
+% take sigma
+sigma = std(X_norm);
 
-sigmaOne = std(X_norm(:, 1));
-sigmaTwo = std(X_norm(:, 2));
+% make a matrix of size X having 1 / sigma in each row
+sg = [ones(size(X)) ./ sigma];
 
-
-X_norm(:, 1) = X_norm(:, 1) - sigmaOne;
-X_norm(:, 2) = X_norm(:, 2) - sigmaTwo; 
+% multiply by X_norm
+X_norm = X_norm .* sg;
 
 % ============================================================
 
