@@ -53,6 +53,7 @@ pause;
 
 X = [ones(m, 1), data(:,1)]; % Add a column of ones to x
 theta = zeros(2, 1); % initialize fitting parameters
+theta_ = zeros(2, 1); % initialize fitting parameters
 
 % Some gradient descent settings
 iterations = 4550;
@@ -75,6 +76,7 @@ pause;
 fprintf('\nRunning Gradient Descent ...\n')
 % run gradient descent
 [theta, J_history] = gradientDescent(X, y, theta, alpha, iterations);
+[theta_, J_history_] = gradientDescent(X, y, theta_, alpha, iterations);
 
 % print theta to screen
 fprintf('Theta found by gradient descent:\n');
@@ -104,6 +106,9 @@ figure;
 plot(1:numel(J_history), J_history, '-b', 'LineWidth', 2);
 xlabel('Number of iterations');
 ylabel('Cost J');
+hold on;
+plot(1:numel(J_history_), J_history_, '-r', 'LineWidth', 2);
+hold off;
 pause;
 
 %% ============= Part 4: Visualizing J(theta_0, theta_1) =============
