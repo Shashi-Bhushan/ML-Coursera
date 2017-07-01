@@ -12,11 +12,13 @@ figure; hold on;
 %               examples and 'ko' for the negative examples.
 %
 
+% Vector giving position of where y = 1
+positivePositions = find(y == 1);
+% Vector giving position of where y = 0
+negativePositions = find(y == 0);
 
-
-
-
-
+plot(X(positivePositions, 1), X(positivePositions, 2), 'k+', 'LineWidth', 2, 'MarkerSize', 7);
+plot(X(negativePositions, 1), X(negativePositions, 2), 'ko', 'MarkerFaceColor', 'y', 'LineWidth', 4, 'MarkerSize', 7);
 
 
 
