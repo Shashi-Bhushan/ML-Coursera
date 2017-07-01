@@ -55,7 +55,7 @@ X = [ones(m, 1), data(:,1)]; % Add a column of ones to x
 theta = zeros(2, 1); % initialize fitting parameters
 
 % Some gradient descent settings
-iterations = 1500;
+iterations = 4550;
 alpha = 0.003;
 
 fprintf('\nTesting the cost function ...\n')
@@ -74,7 +74,7 @@ pause;
 
 fprintf('\nRunning Gradient Descent ...\n')
 % run gradient descent
-theta = gradientDescent(X, y, theta, alpha, iterations);
+[theta, J_history] = gradientDescent(X, y, theta, alpha, iterations);
 
 % print theta to screen
 fprintf('Theta found by gradient descent:\n');
@@ -97,6 +97,13 @@ fprintf('For population = 70,000, we predict a profit of %f\n',...
     predict2*10000);
 
 fprintf('Program paused. Press enter to continue.\n');
+pause;
+
+% Plot the convergence graph
+figure;
+plot(1:numel(J_history), J_history, '-b', 'LineWidth', 2);
+xlabel('Number of iterations');
+ylabel('Cost J');
 pause;
 
 %% ============= Part 4: Visualizing J(theta_0, theta_1) =============
