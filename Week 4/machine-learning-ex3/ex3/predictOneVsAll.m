@@ -30,11 +30,22 @@ X = [ones(m, 1) X];
 %       for each row.
 %       
 
-
-
-
-
-
+% iterate over X and find probability that it is 1, it is 2, it is 3 etc.
+for b = 1:size(X,1)
+	
+	m = X(b, :);
+	
+	a = zeros(num_labels, 1);
+	% find probability from 1 to 10
+	for c = 1:num_labels
+		% assign probability of each digit in a array
+		a(c) = sigmoid(m * all_theta(c,:)');
+	end
+	
+	% j is value and k is index of max
+	[j, k] = max(a);
+	p(b) = k;
+end
 
 % =========================================================================
 
