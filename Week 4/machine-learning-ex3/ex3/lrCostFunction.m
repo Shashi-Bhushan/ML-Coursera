@@ -30,12 +30,13 @@ grad = zeros(size(theta));
 h = sigmoid(X * theta);
 
 sizeTheta = size(theta, 1);
-J = ((y' * log(h) + (1 - y)' * log(1 - h)) / -m) + ( (lambda/(2 * m)) * sum(theta(2:sizeTheta)));
+temp = theta;
+temp(1) = 0;
+
+J = ((y' * log(h) + (1 - y)' * log(1 - h)) / -m) + (lambda/(2 * m)) * ones(1,size(temp,1)) * ( temp .^ 2 );
 
 
-grad = ((h - y)' * X)' / m;
-sizeGrad = size(grad, 1);
-grad(2:sizeGrad) = grad(2:sizeGrad) + (lambda/m) * theta(2:sizeGrad);
+grad = ((h - y)' * X)' / m + (lambda/m) * temp;
 %
 % Hint: When computing the gradient of the regularized cost function, 
 %       there're many possible vectorized solutions, but one solution
