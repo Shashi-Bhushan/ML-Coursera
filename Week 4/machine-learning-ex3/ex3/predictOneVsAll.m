@@ -39,6 +39,7 @@ for b = 1:size(X,1)
 	% find probability from 1 to 10
 	for c = 1:num_labels
 		% assign probability of each digit in a array
+		% size of all_theta(c,:) is [1, 401]
 		a(c) = sigmoid(m * all_theta(c,:)');
 	end
 	
