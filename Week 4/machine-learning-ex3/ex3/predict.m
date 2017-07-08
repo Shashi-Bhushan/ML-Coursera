@@ -22,30 +22,36 @@ p = zeros(size(X, 1), 1);
 %
 
 % size of X (5000 400)
-a1 = [ones(m,1) X];
+layer0 = [ones(m,1) X];
 
 % size(a1)      -> 5000 401
 % size(theta1)  -> 25 401
 % size(theta2)  -> 10 26 
 
 % Take X row by row
-for a = 1:size(a1,1)
-% Choose one row from a1
-  b = a1(a, :);
+for a = 1:size(layer0,1)
+  % Choose one row from a1
+  a1 = layer0(a, :);
   
-  
+  % Sets the first layer as [25 1] of 1's
   layer1 = ones(size(Theta1, 1), 1);
   
+  % Formulae for Layer 1 is g(Theta1 * a1)
   % layer 1 is of size 25 1
-  layer1 = sigmoid(Theta1 * b');
+  layer1 = sigmoid(Theta1 * a1');
   
+  % For Computation with the second row, need to ass a +1
   % now size is 26 1
   layer1 = [1; layer1];
   
+  % g(Theta2 * a2)
   layer2 = sigmoid(Theta2 * layer1);
   
+  % Select the maximum (probability) of the 10 classes
+  % Size of layer2 is [10 1]
   [x y] = max(layer2);
   
+  % Assign this probability to p array
   p(a,1) = y;
   
 end
