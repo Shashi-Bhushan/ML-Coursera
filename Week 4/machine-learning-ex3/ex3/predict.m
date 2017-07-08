@@ -21,13 +21,34 @@ p = zeros(size(X, 1), 1);
 %       can use max(A, [], 2) to obtain the max for each row.
 %
 
+% size of X (5000 400)
+a1 = [ones(m,1) X];
 
+% size(a1)      -> 5000 401
+% size(theta1)  -> 25 401
+% size(theta2)  -> 10 26 
 
-
-
-
-
-
+% Take X row by row
+for a = 1:size(a1,1)
+% Choose one row from a1
+  b = a1(a, :);
+  
+  
+  layer1 = ones(size(Theta1, 1), 1);
+  
+  % layer 1 is of size 25 1
+  layer1 = sigmoid(Theta1 * b');
+  
+  % now size is 26 1
+  layer1 = [1; layer1];
+  
+  layer2 = sigmoid(Theta2 * layer1);
+  
+  [x y] = max(layer2);
+  
+  p(a,1) = y;
+  
+end
 
 % =========================================================================
 
