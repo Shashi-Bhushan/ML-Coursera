@@ -5,7 +5,9 @@ Most Important thing we need to find out is Derivative.
 When specifically applied to the case of linear regression, a new form of the gradient descent equation can be derived. 
 We can substitute our actual cost function and our actual hypothesis function and modify the equation to find the derivatives for Linear Regression:
 
+for j = 0
 ∂/∂θ₀J(θ₀, θ₁) = (1/m) ∑i=1 to m [hθ(xⁱ) − yⁱ]
+for j = 1
 ∂/∂θ₁J(θ₀, θ₁) = (1/m) ∑i=1 to m [hθ(xⁱ) − yⁱ] * xⁱ
 
 # Gradient Descent Algorithm

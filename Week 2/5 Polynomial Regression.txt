@@ -1,0 +1,34 @@
+Features and Polynomial Regression
+-------------------------------------
+We can improve our features and the form of our hypothesis function in a couple different ways.
+
+We can combine multiple features into one. For example, we can combine x₁ and x₂ into a new feature x₃ by taking x₁⋅x₂ (dot product)
+
+
+Polynomial Regression
+-----------------------
+Our hypothesis function need not be linear (a straight line) if that does not fit the data well.
+
+We can change the behavior or curve of our hypothesis function by making it a quadratic, cubic or square root function (or any other form).
+
+
+Question: 
+
+Suppose you want to predict a house's price as a function of its size. Your model is
+
+h(sub θ)x = θ₀ + θ₁(size) + θ₂√(size) 
+
+Suppose size ranges from 1 to 1000 (feet²). You will implement this by fitting a model
+
+h(sub θ)x = θ₀ + θ₁x₁ + θ₂x₂ 
+
+Finally, suppose you want to use feature scaling (without mean normalization).
+
+Which of the following choices for x₁ and x₂ should you use? (Note: √1000 ≈ 32)
+
+
+Ans:
+x₁ = size / 1000
+x₂ = (√size) / 32
+
+Remember, x/range 

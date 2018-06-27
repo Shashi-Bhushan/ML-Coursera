@@ -1,0 +1,14 @@
+Gradient Descent for Multiple variables
+
+repeat until convergence {
+	θ₀ := θ₀ − α * 1/m ∑ i= 1..m (h(sub θ)x⁽ⁱ⁾−y⁽ⁱ⁾)⋅x₀⁽ⁱ⁾
+	0₁ := θ₁ − α * 1/m ∑ i= 1..m (h(sub θ)x⁽ⁱ⁾−y⁽ⁱ⁾)⋅x₁⁽ⁱ⁾
+	θ₂ := θ₂ − α * 1/m ∑ i= 1..m (h(sub θ)x⁽ⁱ⁾−y⁽ⁱ⁾)⋅x₂⁽ⁱ⁾
+	...
+}
+
+in other words 
+
+repeat until convergence {
+	θⱼ := θⱼ − α * 1/m ∑ i= 1..m (h(sub θ)x⁽ⁱ⁾−y⁽ⁱ⁾)⋅xⱼ⁽ⁱ⁾ ∀ j = 0..n, where n is number of features
+}

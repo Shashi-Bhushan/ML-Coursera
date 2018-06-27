@@ -8,17 +8,17 @@ m = the number of training examples
 n = the number of features
 The multivariable form of the hypothesis function accommodating these multiple features is as follows:
 
-hθ(x)=θ₀ + θ₁x₁ + θ₂x₂ + θ₃x₃ + ... + θₙxₙ
+h(sub θ)x = θ₀ + θ₁x₁ + θ₂x₂ + θ₃x₃ + ... + θₙxₙ
 
 In order to develop intuition about this function, we can think about θ₀ as the basic price of a house, θ₁ as the price per square meter, θ₂ as the price per floor, etc. x₁ will be the number of square meters in the house, x₂ the number of floors, etc.
 
 Using the definition of matrix multiplication, our multivariable hypothesis function can be concisely represented as:
 
-hθ(x)=[θ0 θ1 ... θn] | x₀ | = θᵀx
-					 | x₁ |
-					 | x₂ |
-					 | .. |
-					 | xₙ |
+h(sub θ)x = [θ0 θ1 ... θn] | x₀ | = θᵀx
+					 	   | x₁ |
+					 	   | x₂ |
+   						   | .. |
+						   | xₙ |
 
 This is a vectorization of our hypothesis function for one training example; see the lessons on vectorization to learn more.
 

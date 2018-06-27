@@ -1,26 +1,39 @@
 Simplified Cost Function
-
+--------------------------
 I have a cost function and my goal is to minimize Cost function J(θ₀, θ₁) for a given θ₀, θ₁ value.
 
 Now,
-	hθ(x) = θ₀ + θ₁(x)
+	h(sub θ)x = θ₀ + θ₁x
 if i choose θ₀ as 0, then 
-	hθ(x) = θ₁(x)
+	h(sub θ)x = θ₁(x)
 
-For, x = 0, hθ(x) will also be zero. Line for hθ(x) will pass through the origin.
+For, x = 0, h(sub θ)x will also be zero. Line for h(sub θ)x will pass through the origin.
 
 Also, our cost function will become 
 	J(θ₁) = (1/2m) ∑i=1 to m [ θ₁(xi) − yi ]
 
+
+ G R A P H
+-----------------
+3| - - - - x
+ |         |
+2| - - -x
+ |      |  |
+1|- -x
+ |   |  |  |
+0|_________________
+  0  1  2  3  4  5
+
+
 Now, our goal is to minimize J(θ₁).
 
-				hθ(x)							|						J(θ₁)
+				h(sub θ)x						|						J(θ₁)
 												|
 	For a fixed θ₁, This is a function of x.	|			This is a Function of parameter θ₁.
 												|
  	If i take θ₁ = 1, then for all values of x 	|		For θ₁ = 1, as h(xⁱ) = xⁱ
- 		hθ₁(xⁱ) = θ₁xⁱ = xⁱ						|		J(θ₁) = (1/2m) ∑i=1 to m [ θ₁(xⁱ) − yⁱ ]²
- 		i.e. h(xⁱ) = xⁱ							|			  = (1/2m) ∑i=1 to m [ xⁱ − yⁱ ]²     ..  (because xⁱ = 1 and yⁱ = 1)
+ 		h(sub θ₁)xⁱ = θ₁xⁱ = xⁱ					|		J(θ₁) = (1/2m) ∑i=1 to m [ θ₁(xⁱ) − yⁱ ]²
+ 		i.e. h(sub θ)xⁱ = xⁱ					|			  = (1/2m) ∑i=1 to m [ xⁱ − yⁱ ]²     ..  (because xⁱ = 1 and yⁱ = 1)
  												|			  = 0
 =========================
 
@@ -42,9 +55,20 @@ Sample question
 
 Suppose we have a training set with m=3 examples, plotted in the picture. our hypothesis representation is hθ(x) = θ₁(x) with parameters θ₁. What is J(0) ?
 
+ G R A P H
+-----------------
+3| - - - - x
+ |         |
+2| - - -x
+ |      |  |
+1|- -x
+ |   |  |  |
+0|_________________
+  0  1  2  3  4  5
+
 J(0) = (1/2m) [(predicted value at x = 0 - actual value at x = 0)²]
 
-Now, θ₁ = 0 implies that the slope of line is 0.
+Now, θ₁ = 0 implies that the slope of line is 0. (θ₁ is slope of line in this equation) 
 So, when x = 1, h(θ₁) = 0
 	when x = 2, h(θ₁) = 0
 	when x = 3, h(θ₁) = 0
@@ -55,7 +79,7 @@ J(0) = (1/2*3\) [(0 - 1)² + (0 - 2)² + (0 - 3)²]
 	 = 14 / 6
 	 = 2.3
 
-
+=========================
 
 So, to summarize, each value of θ₁ will corresponde to a different hypothesis function.
 and mean square error for the hypothesis function w.r.t θ₁ will also change.
@@ -70,6 +94,6 @@ Our goal is to minimize J(θ₁) i.e. our cost function. For θ₁ = 1, Cost fun
 
 =========================
 
-If we try to think of it in visual terms, our training data set is scattered on the x-y plane. We are trying to make a straight line (defined by hθ(x)) which passes through these scattered data points.
+If we try to think of it in visual terms, our training data set is scattered on the x-y plane. We are trying to make a straight line (defined by h(sub θ)x) which passes through these scattered data points.
 
 Our objective is to get the best possible line. The best possible line will be such so that the average squared vertical distances of the scattered points from the line will be the least. Ideally, the line should pass through all the points of our training data set. In such a case, the value of J(θ₀,θ₁) will be 0.

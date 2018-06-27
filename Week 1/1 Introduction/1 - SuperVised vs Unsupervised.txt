@@ -3,7 +3,7 @@ Supervised Learning
 =========================
 
 A good supervised learning model predicts the outputs of unobserved inputs using knowledge of the outputs of observed inputs. 
-The ability to make successful predictions on unobserved inputs from observed data is called generalization.
+The ability to make successful predictions on unobserved inputs from observed data is called 'Generalization'.
 
 For any observed data, there are an infinite number of functions that pass through all input-output pairs. 
 The “best” function is not necessarily one which fits all of the observed data, but instead is one that generalizes well.
@@ -11,19 +11,20 @@ The “best” function is not necessarily one which fits all of the observed da
 Supervised Learning problems are generally of two types.
 
 # Classification
+-----------------
+y ∈ { a finite set of values}
+Note: y is the target variable here. 
 
-y(i) ∈ { a finite set of values}
-
-In the task of distinguishing between dogs and cats, we wanted to classify an image into discrete categories with no numerical relationship; i.e., we cannot say Cat is 2 times Dog. 
-This type of problem is called a classification problem.
-
+In the task of distinguishing between dogs and cats, we wanted to classify an image into discrete categories with no numerical relationship i.e. we cannot say Cat is 2 times Dog. 
+This type of problem is called a classification problem. There is no numerical relationship between the categories.
 
 # Regression
+----------------
+y ∈ R Ɐ real numbers
 
-y(i) ∈ R Ɐ real numbers
-
-On the other hand, in the previous question, we found a function to relate an input to a numerical output (Size of House to Price). 
-These outputs have a clear numerical relationship; e.g., the output of 6 feet is twice the output of 3 feet. This type of problem is known as a regression problem.
+On the other hand, we found a function to relate an input to a numerical output (Size of House to Price). 
+These outputs have a clear numerical relationship 
+Eg. the output for an input variable '6' feet(denoted by x) is twice the output for input variable '3' feet. This type of problem is known as a regression problem.
 
 =========================
 Unsupervised Learning
@@ -31,15 +32,18 @@ Unsupervised Learning
 
 As the name might imply, unsupervised learning attempts to determine relationships between inputs without using any example outputs (such as “dog” or “cat” in our earlier example)
 
-Given (x¹, x², .... xⁿ), find patterns in the data.
+Eg. Given (x¹, x², .... xⁿ), find patterns in the data.
 No Target Variable Given here, on the basis of which to Distinguish data.
 
-Eg. Music with two voices, Database of DNAs, a Collection of photos
-all these are examples of unsupervised learning problems, where it's not given that on the basis of which target varibles, the data should be classified.
+Eg. Music with two voices (Cocktail Party Problem), Database of DNAs, a Collection of photos
+All these are examples of unsupervised learning problems, where it's not given that on the basis of which target varibles, the data should be classified.
 
 # Clustering
+-----------------
+The task of distinguishing data on the basis of some pattern in the data. There can be more than one way to make clusters of data.
 
-We have some points in 2-D real space. Your task is to find cluster in the data.
-A collection of photos and segregating those photos on the basis of if they are front bumper or rear bumper etc are clustering.
+Eg. We have some points in 2-D real space. Your task is to find cluster in the data.
+Eg. A collection of photos and segregating those photos on the basis of if they are front bumper or rear bumper of a car.
 
 # Non Clustering - Cocktail Party Problem
+In this task as well, we don't have a target variable defined. But the data has some relationship that defines how to data is to be segregated.

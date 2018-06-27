@@ -1,0 +1,83 @@
+Debugging Gradient Descent
+--------------------
+
+Make a plot with number of iterations on the x-axis. Now plot the cost function, J(θ) over the number of iterations of gradient descent. If J(θ) ever increases, then you probably need to decrease α.
+If gradient descent is working correctly, J(θ) should decrease after every iteration.
+
+ G R A P H
+-----------------
+5|x
+ | x
+4|  x
+ |- -x 
+3|   | x
+ |       x J(θ)
+2|- -| - - -x
+ |          |  x
+1|   |      |      x
+ |                       x  x  x
+0|___|______|______________
+  0  1  2  3  4  5  6  7  8
+  No of iterations (in 100's)
+
+If you see a graph where J(θ) is going up againt number of iterations, rather than going down. Then it means that gradient descent is not working correctly. In this case, use a smaller α.
+
+
+Question:
+
+Suppose a friend ran gradient descent three times, with α = 0.01, α=0.1, and α = 1s, and got the following three plots (labeled A, B, and C):
+
+Graph A
+5|x
+ | x
+4| x
+ |  x
+3|   x
+ |    x
+2|     x
+ |       x
+1|          x
+ |             x  x  x
+0|_________________________
+  0  1  2  3  4  5  6  7  8
+  No of iterations (in 100's)
+
+
+Graph B
+5|x
+ | x
+4|   x
+ |    x
+3|      x
+ |        x
+2|          x
+ |            x
+1|               x
+ |                  x  x  x
+0|_________________________
+  0  1  2  3  4  5  6  7  8
+  No of iterations (in 100's)
+
+
+Graph C
+5|           x
+ |			 x          
+4|          x
+ |         x
+3|       x
+ |    x
+2|x
+ |            
+1|               
+ |                 
+0|_________________________
+  0  1  2  3  4  5  6  7  8
+  No of iterations (in 100's)
+
+
+  A: 
+  A  α = 0.1
+  B  α = 0.01
+  C  α = 1
+
+  In graph C, the cost function is increasing, so the learning rate is set too high. Both graphs A and B converge to an optimum of the cost function, but graph B does so very slowly, so its learning rate is set too low. Graph A lies between the two.

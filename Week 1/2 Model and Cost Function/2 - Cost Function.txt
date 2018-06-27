@@ -3,35 +3,35 @@ m is the number of training examples.
 
 Hypothesis that we use to make predictions is a linear function.
 
-h subscript theta (x) = θ0 and θ₁(x)
+h(subscript θ)x = θ₀ and θ₁x
 
-θ0 and θ₁ are Parameters of the model.
+Here, θ₀ and θ₁ are Parameters of the model.
 
 =========================
 
 HOW TO CHOOSE THESE TWO PARAMETERS VALUES
 
-I want to choose my hypothesis function h such that my parameters (θ0 and θ₁) are minimum.
-Also, h(x(i)) - y should be minimum i.e. hypothesis of x(i) - Estimated price y should be minimum.
+I want to choose my hypothesis function h such that my parameters (θ₀ and θ₁) are minimum.
+Also, h(x⁽ⁱ⁾) - y should be minimum i.e. hypothesis of x⁽ⁱ⁾ - Estimated price y should be minimum.
 
 So, in order to assess the accuracy of our chosen hypothesis, we use a Cost Function.
 
 =========================
 
 COST FUNCTION
+----------------
+We can measure the accuracy of our hypothesis function by using a cost function. 
+This takes an average difference (actually a fancier version of an average) of all the results of the hypothesis with inputs from x's and the actual output y's.
 
-We can measure the accuracy of our hypothesis function by using a cost function. This takes an average difference (actually a fancier version of an average) of all the results of the hypothesis with inputs from x's and the actual output y's.
+J(θ₀, θ₁) = (1/2m) ∑ i=1 to m [h(sub θ)x⁽ⁱ⁾−y⁽ⁱ⁾]²
 
-J(θ0, θ₁) = (1/2m) ∑i=1 to m [y^i−yi]square 
-		  = (1/2m) ∑i=1 to m [hθ(xi)−yi]square
-
-
-To break it apart, it is (1/2 x¯) where (x¯) is the mean of the squares of [hθ(xi)−yi] , 
+To break it apart, it is (1/2 x¯) where (x¯) is the mean of the squares of [h(sub θ)x⁽ⁱ⁾−y⁽ⁱ⁾] 
 or the difference between the predicted value and the actual value.
-The mean is halved (1/2) as a convenience for the computation of the gradient descent, as the derivative term of the square function will cancel out the 1/2 term.
+
+Note: The mean is halved (1/2) as a convenience for the computation of the gradient descent, as the derivative term of the square function will cancel out the 1/2 term.
 
 This Cost Function is also called Squared Error Function or Mean Error Function.
-Squared Error cost function is the most commonly used Error function for Linear Regression Problems.
+Squared Error cost function is the most commonly used Error Cost function for Linear Regression Problems.
 
 =========================
 
@@ -46,4 +46,4 @@ For Eg, say we have formulae y = 2x. Different values of x and y for this exampl
 	x = 3, y = 6
 	and so on.
 Here, there is no margin of error because each y is derived from a formulae, which takes x as input.
-But, when we have to device a formulae for the data points already given, there is a margin of error. This margin of error is measured by our Cost Function J(θ0, θ₁) and We seek to minimize this error margin so our interpolated values are as close to reality as possible.
+But, when we have to device a formulae for the data points already given, there is a margin of error. This margin of error is measured by our Cost Function J(θ₀, θ₁) and We seek to minimize this error margin so our interpolated values are as close to reality as possible.

@@ -1,0 +1,60 @@
+Feature Scaling
+
+
+We can speed up gradient descent by having each of our input values in roughly the same range. This is because θ will descend quickly on small ranges and slowly on large ranges, and so will oscillate inefficiently down to the optimum when the variables are very uneven.
+
+
+It is possible that the features x₁, x₂ etc are on a different scales.
+For Eg. x₁ might be 2000 an x₂ might be 5. Then, the contour plot for θ₁ and θ₂ w.r.t J(θ) will be skewed oval shapes.
+
+Gradient Descent will take a long time to converge in this case, because it will oscillate back and forth because lines are very close. It will follow a convoluted path.
+
+The way to prevent this is to modify the ranges of our input variables so that they are all roughly the same. Ideally:
+
+x₁ = size(feet²)/2000
+x₂ = number of bedrooms/5
+
+such that 0 <= x₁ <= 1; 0 <= x₂ <= 1
+
+These aren't exact requirements; we are only trying to speed things up. The goal is to get all input variables into roughly one of these ranges, give or take a few.
+
+Two techniques to help with this are feature scaling and mean normalization. Feature scaling involves dividing the input values by the range (i.e. the maximum value minus the minimum value) of the input variable, resulting in a new range of just 1. Mean normalization involves subtracting the average value for an input variable from the values for that input variable resulting in a new average value for the input variable of just zero. To implement both of these techniques, adjust your input values as shown in this formula:
+
+
+Feature Scaling
+---------------
+
+Note: Get every feature in -1 <= xᵢ <= 1 range
+
+Eg.
+
+✓   0      <= x <= 3
+✓  -2      <= x <= 0.5
+✗  -100    <= x <= 100
+✗  -0.0004 <= x <= 0.00005
+
+
+First two examples need not be scaled.
+Next two needs to be scaled near -1 <= x <= 1 range
+
+Mean Normalization
+----------------------
+replace xᵢ with xᵢ - μᵢ to make features have approximately zero mean.
+Note: Do not apply to x₀ = 1
+
+xᵢ = (xᵢ - μᵢ) / sᵢ where xᵢ = feature variable
+						  μᵢ = average value of xᵢ in training set
+						  sᵢ = standard deviation  
+
+Eg.
+
+x₁ = (size - 1000) / 2000   if average house size is 1000
+x₂ = (#bedrooms - 2) / 5    if average house has 2 bedrooms
+
+Note: subtract to mean normalize/ Dicide to scale feature
+
+Question:
+
+Suppose you are using a learning algorithm to estimate the price of houses in a city. You want one of your features xᵢ to capture the age of the house. In your training set, all of your houses have an age between 30 and 50 years, with an average age of 38 years. Which of the following would you use as features, assuming you use feature scaling and mean normalization?
+
+xᵢ = (age of house - 38)/20

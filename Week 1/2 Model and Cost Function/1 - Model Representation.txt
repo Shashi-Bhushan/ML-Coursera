@@ -1,5 +1,5 @@
-Problem
-
+Problem: 
+-----------------
 My Friends house is 1250 Sq Ft and i want to tell them how much they should sell their house for.
 Seeing the House Price vs size chart, we can deduce that the house should sell for 220k.
 
@@ -13,16 +13,20 @@ Interpolate the answer for a given Data Set.
 Also, It's a regression problem because the domain is not fixed.
 The value of the data set we are seeking answer for is not from a specific domain.
 
-
 =========================
 
 m - Number of Training Examples
 x - Number of 'Input' variables/ features
 y - Number of 'Output' variables/ target variable
 
-we’ll use x(i) to denote the “input” variables (living area in this example), also called input features, and y(i) to denote the “output” or target variable that we are trying to predict (price). 
-A pair (x(i),y(i)) is called a training example, and the dataset that we’ll be using to learn—a list of m training examples 
-(x(i), y(i)); i=1 ... m — is called a training set,
+we’ll use x⁽ⁱ⁾ to denote the “input” variables (living area in this example), also called input features, and y⁽ⁱ⁾ to denote the “output” or target variable that we are trying to predict (price). 
+
+
+A pair (x⁽ⁱ⁾,y⁽ⁱ⁾) is called a training example, and the dataset that we’ll be using to learn a list of m training examples 
+(x⁽ⁱ⁾, y⁽ⁱ⁾) ∀ i = 1..m  is called a training set,
+
+
+Note: usually x⁽ⁱ⁾ is denoted as iᵗʰ row in the training set. Because we only have one feature in univariate linear regression, thus x⁽ⁱ⁾ will denote our one and only feature/input variable in ith row. we can also write it as x₁⁽ⁱ⁾ (First element in iᵗʰ row of the training set).
 
 =========================
 
@@ -42,7 +46,7 @@ Hypothesis is a function, whose job is to take as input size of house and output
 		 	   \/
 		 	--------	
 Size of	->	|  h   | -> Estimated
-House (x)	--------	Price of House(y)
+House (x)	--------	Price of House (y)
 
 
 h maps x's to y's
@@ -52,11 +56,13 @@ In our example, Hypothesis h is estimating is the price of the house corresponsi
 
 HOW TO REPRESENT h
 
-h(subscript theta) x = theta(subscript 0) + theta(subscript 1) x 
+h(subscript θ) x = θ₀ + θ₁x 
 
 shorthand as h(x)
 
 In our function, our Hypothesis h is a Linear Regression with one variable.
 ALSO, known as Univariate Linear Regression.
+
 Remember, that it's a Regression problem, for that When the target variable that we’re trying to predict is continuous, such as in our housing example, we call the learning problem a regression problem.
+
 When y can take on only a small number of discrete values (such as if, given the living area, we wanted to predict if a dwelling is a house or an apartment, say), we call it a classification problem.
