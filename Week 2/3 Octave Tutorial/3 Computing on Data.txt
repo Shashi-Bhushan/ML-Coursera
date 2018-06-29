@@ -1,0 +1,30 @@
+A = [1 2; 3 4; 5 6]
+
+B = [1 2; 3 4; 5 6]
+
+C = [1 2; 3 4]
+
+A .* B 		% it will be [1 4; 9 16; 25 36]. Element wise multiplication
+A .* 2		% It will be [2 4; 6 8; 10 12]
+
+V = [1; 2; 3]
+1 ./ V 		% it will be [1.00000; 0.50000; 0.33333]
+
+log(V)		% Element wise log
+
+abx(V)		% Element wise Absolute value
+
+-V 			% Element wise negation
+
+
+V = V + ones(length(V), 1)
+Result will be [2; 3; 4]
+
+A' 				% Gives Transpose of matrix A
+
+a = [1 2 34 4]
+val = max(a)	% Gives 34
+[val, ind] = max(a)	% gives [34 3]
+
+Note:
+max(A) will give column wise maximum 

@@ -1,0 +1,19 @@
+Diagonal Matrix
+----------------
+eye(5)
+
+Random Matrix
+-----------------
+rand(5)
+
+Random Matrix with zero mean
+-----------------------------
+randn(5)
+
+Plot
+------
+hist(featuresX)
+
+Size
+------
+size(featuresX)

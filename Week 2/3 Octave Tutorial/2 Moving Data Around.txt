@@ -1,0 +1,34 @@
+Load Data
+-----------
+load featuresX.dat
+load('featuresX.dat')
+
+Save Data
+----------
+save hello.mat featuresX
+
+Save Data in Human Readable Format
+
+save hello.txt featuresX -ascii
+
+See Variables loaded in memory
+-------------------------------
+
+who
+whos
+
+Delete Variables
+-----------------
+clear featuresX
+
+
+v = price(1:10) 		% sets v as first 10 elements of vector Y
+A(3,2)					% Gives elements at row 3, column 2
+A(2,:)					% Gives every element along row 2
+A(:,2)					% Gives every element along column 2
+A([1,3],:)				% Gives every element along rows 1 and 3
+A(:,2) = [10; 11; 12]	% Assign [10; 11; 12] as second column
+A =[A, [10; 11; 12]]	% Add Column [10; 11; 12] to end of A
+A(:)					% put all elements of A in a single vector
+c = [A B]				% concatenate A and B to make C matrix (Similar to C = [A, B])
+C = [A; B]				% concatenate A and B, B being at bottom of A instead of adjacent to A
