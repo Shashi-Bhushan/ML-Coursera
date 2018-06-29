@@ -1,0 +1,1 @@
+function [X y] = readData()  data = load('data.txt');  % X is all rows first column  X = data(:, 1)  % y is all rows second column  y = data(:, 2)end
