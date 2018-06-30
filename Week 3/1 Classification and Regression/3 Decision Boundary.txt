@@ -1,0 +1,33 @@
+Decision Boundary
+------------------
+
+3\
+ |\  	x  	x
+ |  \	  x  x
+2|   \ x  x  x
+ |     \
+ | o    \	x    x
+1|o o  o  \   x
+ | o o   o \  
+ |__________\______________
+ 0   1   2   3   4   5   6 
+
+
+
+Consider logistic regression with two features x₁ and x₂. Suppose θ₀ = =5, θ₁ = −1, θ₂ = 0, so that h(sub θ)x = g(5 - x₁). 
+Which of these shows the decision boundary of h(sub θ)x?
+
+Ans:
+5|				|
+ |				|
+4|				|
+ |				|
+3|	  "y = 1"   |	"y = 0"
+ |				|
+2|				|
+ |				|
+1|				|				
+ |______________|____________
+ 0  1  2  3  4  5  6  7  8  9
+
+ Predict Y = 0 if x₁ is greater than 5.
