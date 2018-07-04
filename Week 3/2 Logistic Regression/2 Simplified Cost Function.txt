@@ -1,0 +1,34 @@
+We can compress our cost function's two conditional cases into one case:
+
+Cost(h(sub θ)x,y) = - ylog(h(sub θ)x) - (1 - y)log(1 - h(sub θ)x). 
+Notice that when y is equal to 1, then the second term (1-y)log(1-h(sub θ)x) will be zero and will not affect the result. If y is equal to 0, then the first term -ylog(h(sub θ)x) will be zero and will not affect the result.
+
+We can fully write out our entire cost function as follows:
+
+J(θ) = -1/m ∑i = 1..m [yⁱlog(h(sub θ)xⁱ)) + (1 - yⁱ)log(1 - h(sub θ)xⁱ))]
+
+A vectorized implementation is:
+
+h=g(Xθ)
+
+J(θ)=1/m⋅(−yᵀlog(h) − (1−y)ᵀlog(1−h))
+
+Note: T is transpose here.
+
+
+Gradient Descent
+Remember that the general form of gradient descent is:
+
+Repeat{
+	θⱼ := θⱼ − α ∂/∂θⱼ[J(θ)]
+}
+We can work out the derivative part using calculus to get:
+
+Repeat{
+	θⱼ := θⱼ − α/m ∑ i = 1..m (h(sub θ)xⁱ − yⁱ)⋅xⱼⁱ
+}
+Notice that this algorithm is identical to the one we used in linear regression. We still have to simultaneously update all values in theta.
+
+A vectorized implementation is:
+
+θ := θ - α/m Xᵀ (g(Xθ) - ⃗y )

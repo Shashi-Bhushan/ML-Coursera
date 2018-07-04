@@ -1,0 +1,15 @@
+Regularized Linear Regression
+------------------------------
+
+
+Suppose you are doing gradient descent on a training set of m > 0 examples, using a fairly small learning rate α > 0 and some regularization parameter λ > 0. Consider the update rule:
+
+θⱼ := θⱼ(1 - α * λ/m) - α * 1/m ∑ i=1..m(h(sub θ(xⁱ) - yⁱ) xⱼⁱ
+Which of the following statements about the term (1 - α * λ/m) must be true?
+
+Ans:
+(1 - α * λ/m) < 1
+
+
+Intuition:
+on every updae of θⱼ, we shrink the value of θⱼ a little bit. because (1 - α * λ/m) < 1, hence it results in shrinking the values a bit.

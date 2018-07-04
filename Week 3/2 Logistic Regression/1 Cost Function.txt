@@ -1,0 +1,21 @@
+Logistic Regression Cost Function
+----------------------------------
+
+In logistic regression, the cost function for our hypothesis outputting (predicting) h(sub θ)x on a training example that has label y ∈ {0,1} is:
+
+cost(h(sub θ)x,y) = { −logh(sub θ)x 	if y = 1
+					{ −log(1−h(sub θ)x) if y = 0
+
+Which of the following are true? Check all that apply.
+
+Ans 
+- If h(sub θ)x = y, then cost(h(sub θ)x,y) = 0 (for both y = 0 and y = 1).
+- If y = 0, then cost(h(sub θ)x,y) → ∞ as h(sub θ)x → 1.
+- Regardless of whether y = 0 or y = 1, if h(sub θ)x = 0.5, then cost(h(sub θ)x,y) > 0.
+
+Note:
+Regarding First point, if y = 0 and our hypothesis predict that y = 0, then the cost will be 0 in this case. Same is case when y = 1 and our hypothesis predicts the correct output.
+Regarding second point, if y = 1 and our hypothesis predicts that y = 0, then the cost will be ∞ in this case.
+
+
+

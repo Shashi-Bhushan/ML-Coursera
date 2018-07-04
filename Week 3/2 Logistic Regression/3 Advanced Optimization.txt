@@ -1,0 +1,13 @@
+Suppose you want to use an advanced optimization algorithm to minimize the cost function for logistic regression with parameters θ₀ and θ₁. You write the following code:
+
+function [jVal, gradient] = costFunction(theta)
+	jVal = % code to compute J(theta)
+	gradient(1) = CODE#1 % derivative of θ₀
+	gradient(2) = CODE#2 % derivative of θ₁
+end
+
+What should CODE#1 and CODE#2 above compute?
+
+Ans:
+CODE#1 should compute 1/m∑i=1..m[(h(sub θ)(xⁱ) - yⁱ)⋅ x₀ⁱ] (partial derivative w.r.t 0 ∂/∂θ₀J(θ) ) 
+CODE#1 should compute 1/m∑i=1..m[(h(sub θ)(xⁱ) - yⁱ)⋅ x₁ⁱ] (partial derivative w.r.t 1 ∂/∂θ₁J(θ) ) 

@@ -2,6 +2,16 @@ Logistic Regression
 --------------------
 To attempt classification, one method is to use linear regression and map all predictions greater than 0.5 as a 1 and all less than 0.5 as a 0. However, this method doesn't work well because classification is not actually a linear function.
 
+Result sets jumps from zero to one at once. (Not Linear function)
+
+1|			  |-x   x   x
+ |			  |
+ |			  |
+ |			  |
+ |			  |
+ |__x___x___x_|________________
+0   1   2   3   4   5   6
+
 The classification problem is just like the regression problem, except that the values we now want to predict take on only a small number of discrete values. For now, we will focus on the binary classification problem in which y can take on only two values, 0 and 1. (Most of what we say here will also generalize to the multiple-class case.) 
 
 For instance, if we are trying to build a spam classifier for email, then x⁽ⁱ⁾ may be some features of a piece of email, and y may be 1 if it is a piece of spam mail, and 0 otherwise. Hence, y ∈ {0,1}. 

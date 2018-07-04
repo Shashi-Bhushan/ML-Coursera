@@ -1,23 +1,40 @@
 Decision Boundary
 ------------------
 
-3\
- |\  	x  	x
- |  \	  x  x
-2|   \ x  x  x
- |     \
- | o    \	x    x
-1|o o  o  \   x
- | o o   o \  
- |__________\______________
- 0   1   2   3   4   5   6 
+In order to get our discrete 0 or 1 classification, we can translate the output of the hypothesis function as follows:
 
 
+h(sub θ)x ≥ 0.5 → y = 1
+h(sub θ)x < 0.5 → y = 0
 
-Consider logistic regression with two features x₁ and x₂. Suppose θ₀ = =5, θ₁ = −1, θ₂ = 0, so that h(sub θ)x = g(5 - x₁). 
-Which of these shows the decision boundary of h(sub θ)x?
+The way our logistic function g behaves is that when its input is greater than or equal to zero, its output is greater than or equal to 0.5:
+i.e. g(z) ≥ 0.5 when z ≥ 0
 
-Ans:
+Remember
+z=0, e⁰ = 1   ⇒ g(z) = 1/2 
+z→∞, e^−∞ → 0 ⇒ g(z) = 1 
+z→−∞,e^∞ → ∞  ⇒ g(z) = 0
+
+So if our input to g is θᵀX, then that means:
+
+h(sub θ)x = g(θᵀx) ≥ 0.5; when θᵀx ≥ 0
+From these statements we can now say:
+
+θᵀx ≥ 0 ⇒ y = 1
+θᵀx < 0 ⇒ y = 0
+
+The decision boundary is the line that separates the area where y = 0 and where y = 1. It is created by our hypothesis function.
+
+Eg.
+
+θ=[5; -1; 0];
+
+y = 1 if 5 + (−1)x₁ + 0x₂ ≥ 0
+         5 − x₁ ≥ 0
+         −x₁ ≥ −5
+         x₁ ≤ 5
+In this case, our decision boundary is a straight vertical line placed on the graph where x₁ = 5, and everything to the left of that denotes y = 1, while everything to the right denotes y = 0.
+
 5|				|
  |				|
 4|				|
@@ -31,3 +48,23 @@ Ans:
  0  1  2  3  4  5  6  7  8  9
 
  Predict Y = 0 if x₁ is greater than 5.
+
+
+Another Example: 
+
+In this case, θ = [-3; 1; 1] and h(sub θ)x = g(θ₀ + θ₁x₁ + θ₂x₂).
+y = 1 if -3 + x₁ + x₂ ≥ 0
+		 x₁ + x₂ ≥ 3
+3\
+ |\  	x  	x
+ |  \	  x  x
+2|   \ x  x  x
+ |     \
+ | o    \	x    x
+1|o o  o  \   x
+ | o o   o \  
+ |__________\______________
+ 0   1   2   3   4   5   6 
+
+ Note: Decision boundary is a property, not of the the training set, but of the hypothesis and the parameters.
+ The training set is not what we use to define the decision boundary. The training set may be used to fit the parameters theta, once you have the parameters theta, that is what defines the decision boundary.
